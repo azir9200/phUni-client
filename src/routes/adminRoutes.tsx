@@ -1,46 +1,52 @@
-
+import AcademicSemester from "../pages/admin/academicManagement/academicSemestert";
 import AdminDashboard from "../pages/admin/AdminDashboard";
 import CreateAdmin from "../pages/admin/CreateAdmin";
 import CreateFaculty from "../pages/admin/CreateFaculty";
 import CreateStudent from "../pages/admin/CreateStudent";
 
-
-
 export const AdminPath = [
-  { 
-    name: 'DashBoard',
-    path: 'admin/dashboard',
-    element: <AdminDashboard/>
-},
- 
-{
-  name: 'User Management',
-  children: [
-    {
-      name: ' Admin',
-      path: 'create-admin',
-      element: <CreateAdmin/>,
-      
-    },
-    {
-      name: 'Create Faculty',
-      path: 'create-faculty',
-      element: <CreateFaculty/>,
-   
-    },
-    {
-      name: 'Create Student',
-      path: 'create-student',
-      element: <CreateStudent/>,
-      
-    },
-    {
-      name: 'Create U',
-      path: 'create-student',
-      element: <CreateStudent/>,
-      
-    },  ],
-}];
+  {
+    name: "DashBoard",
+    path: "admin/dashboard",
+    element: <AdminDashboard />,
+  },
+  {
+    name: "Academic Management",
+    children: [
+      {
+        name: "Academic Semester",
+        path: "academic-semester",
+        element: <AcademicSemester />,
+      },
+    ],
+  },
+
+  {
+    name: "User Management",
+    children: [
+      {
+        name: " Admin",
+        path: "create-admin",
+        element: <CreateAdmin />,
+      },
+      {
+        name: "Create Faculty",
+        path: "create-faculty",
+        element: <CreateFaculty />,
+      },
+      {
+        name: "Create Student",
+        path: "create-student",
+        element: <CreateStudent />,
+      },
+      {
+        name: "Create U",
+        path: "create-student",
+        element: <CreateStudent />,
+      },
+    ],
+  },
+];
 
 // export const adminSidebarItems = adminPath.reduce(
 //   (acc: TSidebarItem[], item) => {
@@ -88,23 +94,21 @@ export const AdminPath = [
 // }, []);
 // console.log(adminRoutes);
 
-
-
 // export const adminPath =[
 //   {
 //      path: 'dashboard',
-//      element: <AdminDashboard />,             
-//   },          
+//      element: <AdminDashboard />,
+//   },
 //   {
 //     path: 'create-student',
-//     element: <CreateStudent />,          
+//     element: <CreateStudent />,
 //   },
 //   {
 //     path: 'create-admin',
-//     element: <CreateAdmin />,          
+//     element: <CreateAdmin />,
 //   },
 //   {
 //     path: 'create-faculty',
-//     element: <CreateFaculty />,          
+//     element: <CreateFaculty />,
 //   },
 // ]
